@@ -1,0 +1,17 @@
+<form (ngSubmit)="submit()" [formGroup]="signupForm" class="example-form">
+  <mat-form-field class="example-full-width">
+    <input
+    matInput 
+    placeholder="Email" 
+    formControlName="email"
+    >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input 
+    matInput
+    placeholder="Favorite food" 
+    formControlName="password"
+    >
+  </mat-form-field>
+  <button mat-raised-button color="warn" type="submit" [disabled]="!signupForm.valid">click me</button>
+</form>

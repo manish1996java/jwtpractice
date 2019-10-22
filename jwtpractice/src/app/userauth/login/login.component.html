@@ -1,0 +1,19 @@
+<form (ngSubmit)="submit()" [formGroup]="loginform" class="example-form">
+  <mat-form-field class="example-full-width">
+    <input
+    matInput 
+    placeholder="Email" 
+    formControlName="email"
+    >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input 
+    matInput
+    placeholder="Favorite food" 
+    formControlName="password"
+    >
+  </mat-form-field>
+  <!-- <input type="file" #filesl formControlName="imagefile" (change)="onImagePicked($event)"><button mat-raised-button type="button" (click)="filesl.click()">select file</button>
+  <img [src]="imagepreview" alt="" width="200px" height="200px"> -->
+  <button mat-raised-button color="warn" type="submit" [disabled]="!loginform.valid">click me</button>
+</form>
